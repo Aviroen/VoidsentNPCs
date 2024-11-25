@@ -1,0 +1,198 @@
+{
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Characters/{{Lou}}, Portraits/{{Lou}}",
+      "FromFile": "Assets/NPCS/{{TargetPathOnly}}/{{TargetWithoutPath}}.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "{{Lou}}": {
+          "DisplayName": "{{i18n:Lou}}",
+          "BirthSeason": "Fall",
+          "BirthDay": 4,
+          "HomeRegion": "Other",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Rude",
+          "SocialAnxiety": "Shy",
+          "Optimism": "Negative",
+          "IsDarkSkinned": true,
+          "CanBeRomanced": true,
+          "LoveInterest": null,
+          "Calendar": "HiddenUntilMet",
+          "SocialTab": "HiddenUntilMet",
+          "CanSocialize": null,
+          "CanReceiveGifts": true,
+          "CanGreetNearbyCharacters": true,
+          "CanCommentOnPurchasedShopItems": null,
+          "CanVisitIsland": null,
+          "IntroductionsQuest": false,
+          "ItemDeliveryQuests": null,
+          "PerfectionScore": false,
+          "EndSlideShow": "TrailingGroup",
+          "SpouseAdopts": null,
+          "SpouseWantsChildren": true,
+          "SpouseGiftJealousy": null,
+          "SpouseGiftJealousyFriendshipChange": -30,
+          "SpouseRoom": {
+            "MapAsset": null,
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 6,
+              "Height": 9
+            }
+          },
+          "SpousePatio": {
+            "MapAsset": null,
+            "MapSourceRect": {
+              "X": 0,
+              "Y": 0,
+              "Width": 4,
+              "Height": 4
+            },
+            "SpriteAnimationFrames": [
+              [ 16, 1500 ]
+            ],
+            "SpriteAnimationPixelOffset": {
+              "X": 0,
+              "Y": 0
+            }
+          },
+          "SpouseFloors": [],
+          "SpouseWallpapers": [],
+          "DumpsterDiveFriendshipEffect": -5,
+          "DumpsterDiveEmote": null,
+          "FriendsAndFamily": {
+          },
+          "FlowerDanceCanDance": null,
+          "WinterStarGifts": [],
+          "WinterStarParticipant": null,
+          "UnlockConditions": "PLAYER_HAS_SEEN_EVENT Current ",
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Location": null,
+              "Tile": {
+                "X": 26,
+                "Y": 19
+              },
+              "Direction": "right"
+            }
+          ],
+          "TextureName": null,
+          "Appearance": null,
+          "MugShotSourceRect": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "Breather": true,
+          "BreathChestRect": null,
+          "BreathChestPosition": null,
+          "Shadow": null,
+          "EmoteOffset": {
+            "X": 0,
+            "Y": 0
+          },
+          "ShakePortraits": [ 15 ],
+          "KissSpriteIndex": 39,
+          "KissSpriteFacingRight": false,
+          "HiddenProfileEmoteSound": "newRecipe",
+          "HiddenProfileEmoteDuration": 4000,
+          "HiddenProfileEmoteStartFrame": 32,
+          "HiddenProfileEmoteFrameCount": 2,
+          "HiddenProfileEmoteFrameDuration": 200.0,
+          "FormerCharacterNames": [],
+          "CustomFields": null
+        }
+      }
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "{{Lou}}": "{{i18n:Gifts.Loved}}//{{i18n:Gifts.Liked}}//{{i18n:Gifts.Disliked}}//{{i18n:Gifts.Hated}}//{{i18n:Gifts.Neutral}}//"
+      }
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Action": "EditData",
+      "Target": "Data/ConcessionTastes",
+      "Entries": {
+        "{{Lou}}": {
+          "Name": "{{Lou}}",
+          "LovedTags": [
+            "Apple Slices"
+          ],
+          "LikedTags": [
+            "Truffle Popcorn"
+          ],
+          "DislikedTags": [
+            "Black Licorice"
+          ]
+        }
+      }
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "Entries": {
+        "{{Lou}}_Engaged": "{{i18n:Lou}}", //proposal
+        "{{Lou}}_AfterWedding": "{{i18n:Lou}}"
+      }
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+      "LogName": "Edel's' Schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/{{Lou}}",
+      "Entries": {
+        "spring": "",
+        "marriage_Mon": "",
+        "marriage_Tue": "",
+        "marriage_Wed": ""
+      }
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/{{Lou}}",
+      "Entries": {
+      }
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+      "LogName": "Engaged Dialogue",
+      "Action": "EditData",
+      "Target": "data/EngagementDialogue",
+      "Entries": {
+        "{{Lou}}0": "{{i18n:Lou}}",
+        "{{Lou}}1": "{{i18n:Lou}}"
+      }
+    },
+    {
+      "LogName": "Marriage Dialogue - Base",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogue{{Lou}}",
+      "Entries": {
+      }
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    { //edelintro
+      "LogName": "Heart Event - 0",
+      "Action": "EditData",
+      "Target": "data/events/",
+      "Entries": {
+      }
+    }
+  ]
+}
