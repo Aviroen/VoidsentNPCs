@@ -153,60 +153,15 @@ public class BBEG : Monster
         {
             case State.Walking:
                 this.PlayAnimation(this.walkingAnimation, loop: true);
-                if (this.stateTimer == 0f)
-                {
-                    this.stateTimer = 1f;
-                }
                 break;
             case State.Lunging:
                 this.PlayAnimation(this.lungingAnimation, loop: true);
-                if (this.stateTimer == 0f)
-                {
-                    if (this.TargetInRange())
-                    {
-                        this.stateTimer = 1f;
-                    }
-                    else
-                    {
-                        this.stateTimer = 1f;
-                    }
-                }
                 break;
             case State.Firing:
                 this.PlayAnimation(this.firingAnimation, loop: true);
-                if (this.stateTimer == 0f)
-                {
-                    this.stateTimer = 1f;
-                }
-                if (!(this.fireTimer > 0f))
-                {
-                    break;
-                }
-                this.fireTimer -= (float)time.ElapsedGameTime.TotalSeconds;
-                if (this.fireTimer <= 0f)
-                {
-                    this.fireTimer = 0.25f;
-                    if (this.targettedFarmer != null)
-                    {
-                        Vector2 shot_origin = base.Position + new Vector2(0f, -32f);
-                        Vector2 shot_velocity = this.targettedFarmer.Position - shot_origin;
-                        shot_velocity.Normalize();
-                        shot_velocity *= 7f;
-                        base.currentLocation.playSound("Aviroen.VoidsentCP_Shing");
-                        BasicProjectile projectile = new BasicProjectile(25, 10, 0, 3, (float)Math.PI / 16f, shot_velocity.X, shot_velocity.Y, shot_origin, null, null, null, explode: false, damagesMonsters: false, base.currentLocation, this);
-                        projectile.IgnoreLocationCollision = true;
-                        projectile.ignoreTravelGracePeriod.Value = true;
-                        projectile.maxTravelDistance.Value = 640;
-                        base.currentLocation.projectiles.Add(projectile);
-                    }
-                }
                 break;
             case State.Idling:
                 this.PlayAnimation(this.idlingAnimation, loop: true);
-                if (this.stateTimer == 0f)
-                {
-                    this.stateTimer = 1f;
-                }
                 break;
         }
         this.Sprite.animateOnce(time);
@@ -319,19 +274,19 @@ public class BBEG : Monster
             this.targettedFarmer = null;
             this.targettedFarmer = this.findPlayer();
         }
-        if (this.Health >= this.Health / 2)
-        {
-            this.PhaseOne(time);
-        }
-        if (this.Health <= this.Health / 2)
-        {
-            this.PhaseTwo(time);
-            this.walkSpeed = 4;
-        }
         if (this.Health <= this.Health / 4)
         {
             this.PhaseThree(time);
             this.walkSpeed = 6;
+        }
+        else if (this.Health <= this.Health / 2)
+        {
+            this.PhaseTwo(time);
+            this.walkSpeed = 4;
+        }
+        else
+        {
+            this.PhaseOne(time);
         }
     }
     public override void updateMovement(GameLocation location, GameTime time)
