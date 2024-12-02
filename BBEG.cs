@@ -20,8 +20,6 @@ public class BBEG : Monster
      * don't tie behavior to animation
      */
 
-    int healthDeciment = 0;
-
     //GreenSlime
     [XmlIgnore]
     public int readyToJump = -1;
@@ -155,10 +153,10 @@ public class BBEG : Monster
                 this.PlayAnimation(this.walkingAnimation, loop: true);
                 break;
             case State.Lunging:
-                this.PlayAnimation(this.lungingAnimation, loop: true);
+                this.PlayAnimation(this.lungingAnimation, loop: false);
                 break;
             case State.Firing:
-                this.PlayAnimation(this.firingAnimation, loop: true);
+                this.PlayAnimation(this.firingAnimation, loop: false);
                 break;
             case State.Idling:
                 this.PlayAnimation(this.idlingAnimation, loop: true);
