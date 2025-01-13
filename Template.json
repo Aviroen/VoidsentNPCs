@@ -1,46 +1,81 @@
         "DISPLAYNAME": "",
+
         "GENDER": "", //female, male, undefined
+
         "MANNER": "", //polite, neutral, rude changes stringsfromcsfiles
+
         "ANXIETY": "", //outgoing, neutral, shy changes stringsfromcsfiles
+
         "OPTIMISM": "", //positive, neutral, negative changes stringsfromcsfiles
+
         "DARKSKIN": "", //true/false
+
         "ROMANCE": "", //true/false
+
         "GIFTABLE": "", //true/false
+
         "CHILDREN": "", //true/false
+
         "ADOPT": "", //true/false
+
         "UNLOCKCONDITIONS": "", //write in plain english if you want an unlock condition if you do not know
+
         "LOVEDGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+
         "LIKEDGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+
         "DISLIKEDGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+
         "HATEDGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+
         "NEUTRALGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+
+        "ENDRANGE": "3", //NOTE THAT 3 IS THE BASELINE, you can change this, but IT WILL AFFECT **ALL** DIALOGUE KEYS, so you will need to add however many lines to **EACH** if you up this number
+
         "SPRINGSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "SUMMERSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "FALLSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "WINTERSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "MONDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "TUESDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "WEDNESDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "THURSAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "FRIDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "SATURDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "SUNDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "marriage_MONDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "marriage_TUESDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "marriage_WEDNESDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "marriage_THURSAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "marriage_FRIDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "marriage_SATURDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+
         "marriage_SUNDAYSCHEDULE": "" //you can write this in plain english, time to start/location, start to end/location
 
         //HEART DIALOGUES
-        "2HEART": true, //true/false
-        "4HEART": true, //true/false
-        "6HEART": true, //true/false
-        "8HEART": true, //true/false
-        "10HEART": true, //true/false
-        "12HEART": true, //true/false
-        "14HEART": true //true/false
+        "2HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
+        "4HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
+        "6HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
+        "8HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
+        "10HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
+        "12HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
+        "14HEART": true //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 {
   //start of characters/dialogue/npc
