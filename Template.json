@@ -1,48 +1,37 @@
-        "NPCNAME": "Edelweiss",
-        "DISPLAYNAME": "Edelweiss",
-        "GENDER": "Undefined",
-        "MANNER": "Rude", //polite, neutral, rude changes stringsfromcsfiles
-        "ANXIETY": "Shy", //outgoing, neutral, shy changes stringsfromcsfiles
-        "OPTIMISM": "Negative", //positive, neutral, negative changes stringsfromcsfiles
-        "DARKSKIN": "false",
-        "ROMANCE": "true",
-        "GIFTABLE": "true",
-        "CHILDREN": "true",
-        "ADOPT": "false",
-        "XINDEXSPOUSE": "0",
-        "YINDEXSPOUSE": "0",
-        "XINDEXPATIO": "0",
-        "YINDEXPATIO": "0",
-        "UNLOCKCONDITIONS": "PLAYER_HAS_MAIL Current {{ModId}}_EdelweissWarp any",
-        "HOMELOCATION": "{{ModId}}_EdelweissHouse",
-        "HOMEXTILE": "18",
-        "HOMEYTILE": "4",
-        "HOMEFACING": "right", //left, right, up, down
-        "LOVEDGIFTS": "96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed",
-        "LIKEDGIFTS": "198 202 212 213 214 218 219 225 226 227 228 242 265 727 728 730 732 873 904 905 906 907 921 category_flowers",
-        "DISLIKEDGIFTS": "78 259 256 685 769",
-        "HATEDGIFTS": "889 909 910 Moss 203 209 306 307 308 category_junk",
-        "NEUTRALGIFTS": "334 335 336 337 338 378 380 382 384 386 388 390 394 category_trinket",
-        "SLEEPANIMATION": "51/51/51",
-        "ENDRANGE": "3",
-        "SPRINGSCHEDULE": "610 {{ModId}}_EdelweissHouse 18 4 edel_sleepyleft/900 {{ModId}}_EdelweissHouse 19 17 0/1200 {{ModId}}_EdelweissHouse 28 22 edel_hammer/1500 {{ModId}}_EdelweissHouse 26 19 edel_alchemy/1800 {{ModId}}_EdelweissHouse 5 5 edel_read/2100 {{ModId}}_EdelweissHouse 7 15 1/2400 {{ModId}}_EdelweissHouse 18 4 edel_sleepyright/2600 {{ModId}}_EdelweissHouse 20 3 edel_sleep",
-        "SUMMERSCHEDULE": "",
-        "FALLSCHEDULE": "",
-        "WINTERSCHEDULE": "",
-        "MONDAYSCHEDULE": "",
-        "TUESDAYSCHEDULE": "",
-        "WEDNESDAYSCHEDULE": "",
-        "THURSAYSCHEDULE": "",
-        "FRIDAYSCHEDULE": "",
-        "SATURDAYSCHEDULE": "",
-        "SUNDAYSCHEDULE": "",
-        "marriage_MONDAYSCHEDULE": "",
-        "marriage_TUESDAYSCHEDULE": "",
-        "marriage_WEDNESDAYSCHEDULE": "",
-        "marriage_THURSAYSCHEDULE": "",
-        "marriage_FRIDAYSCHEDULE": "",
-        "marriage_SATURDAYSCHEDULE": "",
-        "marriage_SUNDAYSCHEDULE": "",
+        "DISPLAYNAME": "",
+        "GENDER": "", //female, male, undefined
+        "MANNER": "", //polite, neutral, rude changes stringsfromcsfiles
+        "ANXIETY": "", //outgoing, neutral, shy changes stringsfromcsfiles
+        "OPTIMISM": "", //positive, neutral, negative changes stringsfromcsfiles
+        "DARKSKIN": "", //true/false
+        "ROMANCE": "", //true/false
+        "GIFTABLE": "", //true/false
+        "CHILDREN": "", //true/false
+        "ADOPT": "", //true/false
+        "UNLOCKCONDITIONS": "", //write in plain english if you want an unlock condition if you do not know
+        "LOVEDGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+        "LIKEDGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+        "DISLIKEDGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+        "HATEDGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+        "NEUTRALGIFTS": "", //you can write these out with the item ids, spaced out, ex: 96 97 98 99 104 109 114 121 122 124 125 MysticSyrup MysticTreeSeed
+        "SPRINGSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "SUMMERSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "FALLSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "WINTERSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "MONDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "TUESDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "WEDNESDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "THURSAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "FRIDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "SATURDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "SUNDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "marriage_MONDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "marriage_TUESDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "marriage_WEDNESDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "marriage_THURSAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "marriage_FRIDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "marriage_SATURDAYSCHEDULE": "", //you can write this in plain english, time to start/location, start to end/location
+        "marriage_SUNDAYSCHEDULE": "" //you can write this in plain english, time to start/location, start to end/location
 
         //HEART DIALOGUES
         "2HEART": true, //true/false
