@@ -1,4 +1,7 @@
 {
+  //IF YOU WANT MORE REGULAR DIALOGUE, FEEL FREE TO ADD MORE LINES LIKE Sun_4 ETC
+  //IF YOU WANT HEART SPECIFIC DIALOGUE, KEY IT WITH #HEARTS_DAY_0
+  //EX: 2HEARTS_MON_0
   "Test.breakUp": "",
   "Test.divorced": "",
   "Test.DumpsterDiveComment": "",
@@ -57,6 +60,8 @@
   "Test.Sun_1": "",
   "Test.Sun_2": "",
   "Test.Sun_3": "",
+
+  //THIS IS WHERE THE MARRIAGE DIALOGUE BEGINS
   "Test.SpringM_0": "",
   "Test.SpringM_1": "",
   "Test.SpringM_2": "",
