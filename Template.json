@@ -79,6 +79,7 @@
 
         "IGNOREMARRIAGESCHEDULE": true, //true/false whether the npc follows their regular schedule or has a marriage schedule
         "SEPARATEDATABILITY": true //true/false whether you have gender conditions for this npc for datability (i.e. lesbian, gay, etc)
+        "BETASTOGGLED": true //true/false whether or not you want BETAS additional dialogue added after talking with an NPC once
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 {
   //start of characters/dialogue/npc
@@ -336,6 +337,36 @@
   "Test.Sun14_3": "",
   //door unlock
   "Test.NotFriend_Door": "",
+
+//BETAS
+  "BETAS.Test.Monday_0": "",
+  "BETAS.Test.Monday_1": "",
+  "BETAS.Test.Monday_2": "",
+  "BETAS.Test.Monday_3": "",
+  "BETAS.Test.Tuesday_0": "",
+  "BETAS.Test.Tuesday_1": "",
+  "BETAS.Test.Tuesday_2": "",
+  "BETAS.Test.Tuesday_3": "",
+  "BETAS.Test.Wednesday_0": "",
+  "BETAS.Test.Wednesday_1": "",
+  "BETAS.Test.Wednesday_2": "",
+  "BETAS.Test.Wednesday_3": "",
+  "BETAS.Test.Thursday_0": "",
+  "BETAS.Test.Thursday_1": "",
+  "BETAS.Test.Thursday_2": "",
+  "BETAS.Test.Thursday_3": "",
+  "BETAS.Test.Friday_0": "",
+  "BETAS.Test.Friday_1": "",
+  "BETAS.Test.Friday_2": "",
+  "BETAS.Test.Friday_3": "",
+  "BETAS.Test.Saturday_0": "",
+  "BETAS.Test.Saturday_1": "",
+  "BETAS.Test.Saturday_2": "",
+  "BETAS.Test.Saturday_3": "",
+  "BETAS.Test.Sunday_0": "",
+  "BETAS.Test.Sunday_1": "",
+  "BETAS.Test.Sunday_2": "",
+  "BETAS.Test.Sunday_3": "",
 
   //begin marriage dialogue
   "Test.SpringM_0": "",
