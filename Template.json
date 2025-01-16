@@ -80,6 +80,7 @@
         "IGNOREMARRIAGESCHEDULE": true, //true/false whether the npc follows their regular schedule or has a marriage schedule
         "SEPARATEDATABILITY": true //true/false whether you have gender conditions for this npc for datability (i.e. lesbian, gay, etc)
         "BETASTOGGLED": true //true/false whether or not you want BETAS additional dialogue added after talking with an NPC once
+        "BETASBONUSTOGGLED": true //true/false whether or not you want even more dialogue than the standard 4 for BETAS (this is affected by ENDRANGE)
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 {
   //start of characters/dialogue/npc
