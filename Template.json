@@ -12,6 +12,8 @@
 
         "ROMANCE": "", //true/false
 
+        "LIKESGENDER": "Both", //needs to be male/female/both, case-insensitive, this determines whether they'll date the male player/female player/or both genders
+
         "GIFTABLE": "", //true/false
 
         "CHILDREN": "", //true/false
