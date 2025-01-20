@@ -83,6 +83,7 @@
         "SEPARATEDATABILITY": true //true/false whether you have gender conditions for this npc for datability (i.e. lesbian, gay, etc)
         "BETASTOGGLED": true //true/false whether or not you want BETAS additional dialogue added after talking with an NPC once
         "BETASBONUSTOGGLED": true //true/false whether or not you want even more dialogue than the standard 4 for BETAS (this is affected by ENDRANGE)
+        "BETASWIPED": true //whether you want the dialogue to change based on npc having wiped memory THIS WILL DOUBLE ALL DIALOGUE
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 {
   //start of characters/dialogue/npc
@@ -103,6 +104,8 @@
   "Test.RejectMovieTicket": "",
   "Test.GreenRain": "",
   "Test.GreenRainFinished": "",
+  "Test.Engaged": "",
+  "Test.AfterWedding": "",
 
   //monday
   //BETAS
@@ -505,7 +508,7 @@
   
   //door unlock
   "Test.NotFriend_Door": "",
-
+  
   //gift taste dialogue
   "Test.Gifts.Loved": "",
   "Test.Gifts.Liked": "",
@@ -577,5 +580,499 @@
   "Test.Bad_0": "",
   "Test.Bad_1": "",
   "Test.Bad_2": "",
-  "Test.Bad_3": ""
+  "Test.Bad_3": "",
+  
+  //begin wiped dialogue
+  //start of characters/dialogue/npc
+  "Wiped.Test.breakUp": "",
+  "Wiped.Test.divorced": "",
+  "Wiped.Test.DumpsterDiveComment": "",
+  "Wiped.Test.HitBySlingshot": "",
+  "Wiped.Test.SpouseFarmhouseClutter": "",
+  "Wiped.Test.SpouseGiftJealous": "",
+  "Wiped.Test.Spouse_MonstersInHouse": "",
+  "Wiped.Test.SpouseStardrop": "",
+  "Wiped.Test.WipedMemory": "",
+  "Wiped.Test.AcceptBouquet": "",
+  "Wiped.Test.MovieInvitation": "",
+  "Wiped.Test.RejectBouquet": "",
+  "Wiped.Test.RejectGift_Divorced": "",
+  "Wiped.Test.RejectMermaidPendant": "",
+  "Wiped.Test.RejectMovieTicket": "",
+  "Wiped.Test.GreenRain": "",
+  "Wiped.Test.GreenRainFinished": "",
+  "Wiped.Test.Engaged": "",
+  "Wiped.Test.AfterWedding": "",
+
+  //monday
+  //BETAS
+  "BETAS.Wiped.Test.Monday_0": "",
+  "BETAS.Wiped.Test.Monday_1": "",
+  "BETAS.Wiped.Test.Monday_2": "",
+  "BETAS.Wiped.Test.Monday_3": "",
+  //daily
+  "Wiped.Test.Monday_0": "",
+  "Wiped.Test.Monday_1": "",
+  "Wiped.Test.Monday_2": "",
+  "Wiped.Test.Monday_3": "",
+  //2 heart
+  "Wiped.Test.Monday2_0": "",
+  "Wiped.Test.Monday2_1": "",
+  "Wiped.Test.Monday2_2": "",
+  "Wiped.Test.Monday2_3": "",
+  //4 heart
+  "Wiped.Test.Monday4_0": "",
+  "Wiped.Test.Monday4_1": "",
+  "Wiped.Test.Monday4_2": "",
+  "Wiped.Test.Monday4_3": "",
+  //6
+  "Wiped.Test.Monday6_0": "",
+  "Wiped.Test.Monday6_1": "",
+  "Wiped.Test.Monday6_2": "",
+  "Wiped.Test.Monday6_3": "",
+  //8 platonic
+  "Wiped.Test.Platonic.Monday8_0": "",
+  "Wiped.Test.Platonic.Monday8_1": "",
+  "Wiped.Test.Platonic.Monday8_2": "",
+  "Wiped.Test.Platonic.Monday8_3": "",
+  //8 romantic
+  "Wiped.Test.Romantic.Monday8_0": "",
+  "Wiped.Test.Romantic.Monday8_1": "",
+  "Wiped.Test.Romantic.Monday8_2": "",
+  "Wiped.Test.Romantic.Monday8_3": "",
+  //10 platonic
+  "Wiped.Test.Platonic.Monday10_0": "",
+  "Wiped.Test.Platonic.Monday10_1": "",
+  "Wiped.Test.Platonic.Monday10_2": "",
+  "Wiped.Test.Platonic.Monday10_3": "",
+  //romantic
+  "Wiped.Test.Romantic.Monday10_0": "",
+  "Wiped.Test.Romantic.Monday10_1": "",
+  "Wiped.Test.Romantic.Monday10_2": "",
+  "Wiped.Test.Romantic.Monday10_3": "",
+  //12
+  "Wiped.Test.Monday12_0": "",
+  "Wiped.Test.Monday12_1": "",
+  "Wiped.Test.Monday12_2": "",
+  "Wiped.Test.Monday12_3": "",
+  //14
+  "Wiped.Test.Monday14_0": "",
+  "Wiped.Test.Monday14_1": "",
+  "Wiped.Test.Monday14_2": "",
+  "Wiped.Test.Monday14_3": "",
+
+  //tuesday
+  //BETAS
+  "BETAS.Wiped.Test.Tuesday_0": "",
+  "BETAS.Wiped.Test.Tuesday_1": "",
+  "BETAS.Wiped.Test.Tuesday_2": "",
+  "BETAS.Wiped.Test.Tuesday_3": "",
+  //daily
+  "Wiped.Test.Tuesday_0": "",
+  "Wiped.Test.Tuesday_1": "",
+  "Wiped.Test.Tuesday_2": "",
+  "Wiped.Test.Tuesday_3": "",
+  //2 heart
+  "Wiped.Test.Tuesday2_0": "",
+  "Wiped.Test.Tuesday2_1": "",
+  "Wiped.Test.Tuesday2_2": "",
+  "Wiped.Test.Tuesday2_3": "",
+  //4 heart
+  "Wiped.Test.Tuesday4_0": "",
+  "Wiped.Test.Tuesday4_1": "",
+  "Wiped.Test.Tuesday4_2": "",
+  "Wiped.Test.Tuesday4_3": "",
+  //6
+  "Wiped.Test.Tuesday6_0": "",
+  "Wiped.Test.Tuesday6_1": "",
+  "Wiped.Test.Tuesday6_2": "",
+  "Wiped.Test.Tuesday6_3": "",
+  //8 platonic
+  "Wiped.Test.Platonic.Tuesday8_0": "",
+  "Wiped.Test.Platonic.Tuesday8_1": "",
+  "Wiped.Test.Platonic.Tuesday8_2": "",
+  "Wiped.Test.Platonic.Tuesday8_3": "",
+  //8 romantic
+  "Wiped.Test.Romantic.Tuesday8_0": "",
+  "Wiped.Test.Romantic.Tuesday8_1": "",
+  "Wiped.Test.Romantic.Tuesday8_2": "",
+  "Wiped.Test.Romantic.Tuesday8_3": "",
+  //10 platonic
+  "Wiped.Test.Platonic.Tuesday10_0": "",
+  "Wiped.Test.Platonic.Tuesday10_1": "",
+  "Wiped.Test.Platonic.Tuesday10_2": "",
+  "Wiped.Test.Platonic.Tuesday10_3": "",
+  //romantic
+  "Wiped.Test.Romantic.Tuesday10_0": "",
+  "Wiped.Test.Romantic.Tuesday10_1": "",
+  "Wiped.Test.Romantic.Tuesday10_2": "",
+  "Wiped.Test.Romantic.Tuesday10_3": "",
+  //12
+  "Wiped.Test.Tuesday12_0": "",
+  "Wiped.Test.Tuesday12_1": "",
+  "Wiped.Test.Tuesday12_2": "",
+  "Wiped.Test.Tuesday12_3": "",
+  //14
+  "Wiped.Test.Tuesday14_0": "",
+  "Wiped.Test.Tuesday14_1": "",
+  "Wiped.Test.Tuesday14_2": "",
+  "Wiped.Test.Tuesday14_3": "",
+
+  //wednesday
+  //BETAS
+  "BETAS.Wiped.Test.Wednesday_0": "",
+  "BETAS.Wiped.Test.Wednesday_1": "",
+  "BETAS.Wiped.Test.Wednesday_2": "",
+  "BETAS.Wiped.Test.Wednesday_3": "",
+  //daily
+  "Wiped.Test.Wednesday_0": "",
+  "Wiped.Test.Wednesday_1": "",
+  "Wiped.Test.Wednesday_2": "",
+  "Wiped.Test.Wednesday_3": "",
+  //2 heart
+  "Wiped.Test.Wednesday2_0": "",
+  "Wiped.Test.Wednesday2_1": "",
+  "Wiped.Test.Wednesday2_2": "",
+  "Wiped.Test.Wednesday2_3": "",
+  //4 heart
+  "Wiped.Test.Wednesday4_0": "",
+  "Wiped.Test.Wednesday4_1": "",
+  "Wiped.Test.Wednesday4_2": "",
+  "Wiped.Test.Wednesday4_3": "",
+  //6
+  "Wiped.Test.Wednesday6_0": "",
+  "Wiped.Test.Wednesday6_1": "",
+  "Wiped.Test.Wednesday6_2": "",
+  "Wiped.Test.Wednesday6_3": "",
+  //8 platonic
+  "Wiped.Test.Platonic.Wednesday8_0": "",
+  "Wiped.Test.Platonic.Wednesday8_1": "",
+  "Wiped.Test.Platonic.Wednesday8_2": "",
+  "Wiped.Test.Platonic.Wednesday8_3": "",
+  //8 romantic
+  "Wiped.Test.Romantic.Wednesday8_0": "",
+  "Wiped.Test.Romantic.Wednesday8_1": "",
+  "Wiped.Test.Romantic.Wednesday8_2": "",
+  "Wiped.Test.Romantic.Wednesday8_3": "",
+  //10 platonic
+  "Wiped.Test.Platonic.Wednesday10_0": "",
+  "Wiped.Test.Platonic.Wednesday10_1": "",
+  "Wiped.Test.Platonic.Wednesday10_2": "",
+  "Wiped.Test.Platonic.Wednesday10_3": "",
+  //romantic
+  "Wiped.Test.Romantic.Wednesday10_0": "",
+  "Wiped.Test.Romantic.Wednesday10_1": "",
+  "Wiped.Test.Romantic.Wednesday10_2": "",
+  "Wiped.Test.Romantic.Wednesday10_3": "",
+  //12
+  "Wiped.Test.Wednesday12_0": "",
+  "Wiped.Test.Wednesday12_1": "",
+  "Wiped.Test.Wednesday12_2": "",
+  "Wiped.Test.Wednesday12_3": "",
+  //14
+  "Wiped.Test.Wednesday14_0": "",
+  "Wiped.Test.Wednesday14_1": "",
+  "Wiped.Test.Wednesday14_2": "",
+  "Wiped.Test.Wednesday14_3": "",
+
+  //thursday
+  //BETAS
+  "BETAS.Wiped.Test.Thursday_0": "",
+  "BETAS.Wiped.Test.Thursday_1": "",
+  "BETAS.Wiped.Test.Thursday_2": "",
+  "BETAS.Wiped.Test.Thursday_3": "",
+  //daily
+  "Wiped.Test.Thursday_0": "",
+  "Wiped.Test.Thursday_1": "",
+  "Wiped.Test.Thursday_2": "",
+  "Wiped.Test.Thursday_3": "",
+  //2 heart
+  "Wiped.Test.Thursday2_0": "",
+  "Wiped.Test.Thursday2_1": "",
+  "Wiped.Test.Thursday2_2": "",
+  "Wiped.Test.Thursday2_3": "",
+  //4 heart
+  "Wiped.Test.Thursday4_0": "",
+  "Wiped.Test.Thursday4_1": "",
+  "Wiped.Test.Thursday4_2": "",
+  "Wiped.Test.Thursday4_3": "",
+  //6
+  "Wiped.Test.Thursday6_0": "",
+  "Wiped.Test.Thursday6_1": "",
+  "Wiped.Test.Thursday6_2": "",
+  "Wiped.Test.Thursday6_3": "",
+  //8 platonic
+  "Wiped.Test.Platonic.Thursday8_0": "",
+  "Wiped.Test.Platonic.Thursday8_1": "",
+  "Wiped.Test.Platonic.Thursday8_2": "",
+  "Wiped.Test.Platonic.Thursday8_3": "",
+  //8 romantic
+  "Wiped.Test.Romantic.Thursday8_0": "",
+  "Wiped.Test.Romantic.Thursday8_1": "",
+  "Wiped.Test.Romantic.Thursday8_2": "",
+  "Wiped.Test.Romantic.Thursday8_3": "",
+  //10 platonic
+  "Wiped.Test.Platonic.Thursday10_0": "",
+  "Wiped.Test.Platonic.Thursday10_1": "",
+  "Wiped.Test.Platonic.Thursday10_2": "",
+  "Wiped.Test.Platonic.Thursday10_3": "",
+  //romantic
+  "Wiped.Test.Romantic.Thursday10_0": "",
+  "Wiped.Test.Romantic.Thursday10_1": "",
+  "Wiped.Test.Romantic.Thursday10_2": "",
+  "Wiped.Test.Romantic.Thursday10_3": "",
+  //12
+  "Wiped.Test.Thursday12_0": "",
+  "Wiped.Test.Thursday12_1": "",
+  "Wiped.Test.Thursday12_2": "",
+  "Wiped.Test.Thursday12_3": "",
+  //14
+  "Wiped.Test.Thursday14_0": "",
+  "Wiped.Test.Thursday14_1": "",
+  "Wiped.Test.Thursday14_2": "",
+  "Wiped.Test.Thursday14_3": "",
+
+  //friday
+  //BETAS
+  "BETAS.Wiped.Test.Friday_0": "",
+  "BETAS.Wiped.Test.Friday_1": "",
+  "BETAS.Wiped.Test.Friday_2": "",
+  "BETAS.Wiped.Test.Friday_3": "",
+  //daily
+  "Wiped.Test.Friday_0": "",
+  "Wiped.Test.Friday_1": "",
+  "Wiped.Test.Friday_2": "",
+  "Wiped.Test.Friday_3": "",
+  //2 heart
+  "Wiped.Test.Friday2_0": "",
+  "Wiped.Test.Friday2_1": "",
+  "Wiped.Test.Friday2_2": "",
+  "Wiped.Test.Friday2_3": "",
+  //4 heart
+  "Wiped.Test.Friday4_0": "",
+  "Wiped.Test.Friday4_1": "",
+  "Wiped.Test.Friday4_2": "",
+  "Wiped.Test.Friday4_3": "",
+  //6
+  "Wiped.Test.Friday6_0": "",
+  "Wiped.Test.Friday6_1": "",
+  "Wiped.Test.Friday6_2": "",
+  "Wiped.Test.Friday6_3": "",
+  //8 platonic
+  "Wiped.Test.Platonic.Friday8_0": "",
+  "Wiped.Test.Platonic.Friday8_1": "",
+  "Wiped.Test.Platonic.Friday8_2": "",
+  "Wiped.Test.Platonic.Friday8_3": "",
+  //8 romantic
+  "Wiped.Test.Romantic.Friday8_0": "",
+  "Wiped.Test.Romantic.Friday8_1": "",
+  "Wiped.Test.Romantic.Friday8_2": "",
+  "Wiped.Test.Romantic.Friday8_3": "",
+  //10 platonic
+  "Wiped.Test.Platonic.Friday10_0": "",
+  "Wiped.Test.Platonic.Friday10_1": "",
+  "Wiped.Test.Platonic.Friday10_2": "",
+  "Wiped.Test.Platonic.Friday10_3": "",
+  //romantic
+  "Wiped.Test.Romantic.Friday10_0": "",
+  "Wiped.Test.Romantic.Friday10_1": "",
+  "Wiped.Test.Romantic.Friday10_2": "",
+  "Wiped.Test.Romantic.Friday10_3": "",
+  //12
+  "Wiped.Test.Friday12_0": "",
+  "Wiped.Test.Friday12_1": "",
+  "Wiped.Test.Friday12_2": "",
+  "Wiped.Test.Friday12_3": "",
+  //14
+  "Wiped.Test.Friday14_0": "",
+  "Wiped.Test.Friday14_1": "",
+  "Wiped.Test.Friday14_2": "",
+  "Wiped.Test.Friday14_3": "",
+
+  //saturday
+  //BETAS
+  "BETAS.Wiped.Test.Saturday_0": "",
+  "BETAS.Wiped.Test.Saturday_1": "",
+  "BETAS.Wiped.Test.Saturday_2": "",
+  "BETAS.Wiped.Test.Saturday_3": "",
+  //daily
+  "Wiped.Test.Saturday_0": "",
+  "Wiped.Test.Saturday_1": "",
+  "Wiped.Test.Saturday_2": "",
+  "Wiped.Test.Saturday_3": "",
+  //2 heart
+  "Wiped.Test.Saturday2_0": "",
+  "Wiped.Test.Saturday2_1": "",
+  "Wiped.Test.Saturday2_2": "",
+  "Wiped.Test.Saturday2_3": "",
+  //4 heart
+  "Wiped.Test.Saturday4_0": "",
+  "Wiped.Test.Saturday4_1": "",
+  "Wiped.Test.Saturday4_2": "",
+  "Wiped.Test.Saturday4_3": "",
+  //6
+  "Wiped.Test.Saturday6_0": "",
+  "Wiped.Test.Saturday6_1": "",
+  "Wiped.Test.Saturday6_2": "",
+  "Wiped.Test.Saturday6_3": "",
+  //8 platonic
+  "Wiped.Test.Platonic.Saturday8_0": "",
+  "Wiped.Test.Platonic.Saturday8_1": "",
+  "Wiped.Test.Platonic.Saturday8_2": "",
+  "Wiped.Test.Platonic.Saturday8_3": "",
+  //8 romantic
+  "Wiped.Test.Romantic.Saturday8_0": "",
+  "Wiped.Test.Romantic.Saturday8_1": "",
+  "Wiped.Test.Romantic.Saturday8_2": "",
+  "Wiped.Test.Romantic.Saturday8_3": "",
+  //10 platonic
+  "Wiped.Test.Platonic.Saturday10_0": "",
+  "Wiped.Test.Platonic.Saturday10_1": "",
+  "Wiped.Test.Platonic.Saturday10_2": "",
+  "Wiped.Test.Platonic.Saturday10_3": "",
+  //romantic
+  "Wiped.Test.Romantic.Saturday10_0": "",
+  "Wiped.Test.Romantic.Saturday10_1": "",
+  "Wiped.Test.Romantic.Saturday10_2": "",
+  "Wiped.Test.Romantic.Saturday10_3": "",
+  //12
+  "Wiped.Test.Saturday12_0": "",
+  "Wiped.Test.Saturday12_1": "",
+  "Wiped.Test.Saturday12_2": "",
+  "Wiped.Test.Saturday12_3": "",
+  //14
+  "Wiped.Test.Saturday14_0": "",
+  "Wiped.Test.Saturday14_1": "",
+  "Wiped.Test.Saturday14_2": "",
+  "Wiped.Test.Saturday14_3": "",
+
+  //sunday
+  //BETAS
+  "BETAS.Wiped.Test.Sunday_0": "",
+  "BETAS.Wiped.Test.Sunday_1": "",
+  "BETAS.Wiped.Test.Sunday_2": "",
+  "BETAS.Wiped.Test.Sunday_3": "",
+  //daily
+  "Wiped.Test.Sunday_0": "",
+  "Wiped.Test.Sunday_1": "",
+  "Wiped.Test.Sunday_2": "",
+  "Wiped.Test.Sunday_3": "",
+  //2 heart
+  "Wiped.Test.Sunday2_0": "",
+  "Wiped.Test.Sunday2_1": "",
+  "Wiped.Test.Sunday2_2": "",
+  "Wiped.Test.Sunday2_3": "",
+  //4 heart
+  "Wiped.Test.Sunday4_0": "",
+  "Wiped.Test.Sunday4_1": "",
+  "Wiped.Test.Sunday4_2": "",
+  "Wiped.Test.Sunday4_3": "",
+  //6
+  "Wiped.Test.Sunday6_0": "",
+  "Wiped.Test.Sunday6_1": "",
+  "Wiped.Test.Sunday6_2": "",
+  "Wiped.Test.Sunday6_3": "",
+  //8 platonic
+  "Wiped.Test.Platonic.Sunday8_0": "",
+  "Wiped.Test.Platonic.Sunday8_1": "",
+  "Wiped.Test.Platonic.Sunday8_2": "",
+  "Wiped.Test.Platonic.Sunday8_3": "",
+  //8 romantic
+  "Wiped.Test.Romantic.Sunday8_0": "",
+  "Wiped.Test.Romantic.Sunday8_1": "",
+  "Wiped.Test.Romantic.Sunday8_2": "",
+  "Wiped.Test.Romantic.Sunday8_3": "",
+  //10 platonic
+  "Wiped.Test.Platonic.Sunday10_0": "",
+  "Wiped.Test.Platonic.Sunday10_1": "",
+  "Wiped.Test.Platonic.Sunday10_2": "",
+  "Wiped.Test.Platonic.Sunday10_3": "",
+  //romantic
+  "Wiped.Test.Romantic.Sunday10_0": "",
+  "Wiped.Test.Romantic.Sunday10_1": "",
+  "Wiped.Test.Romantic.Sunday10_2": "",
+  "Wiped.Test.Romantic.Sunday10_3": "",
+  //12
+  "Wiped.Test.Sunday12_0": "",
+  "Wiped.Test.Sunday12_1": "",
+  "Wiped.Test.Sunday12_2": "",
+  "Wiped.Test.Sunday12_3": "",
+  //14
+  "Wiped.Test.Sunday14_0": "",
+  "Wiped.Test.Sunday14_1": "",
+  "Wiped.Test.Sunday14_2": "",
+  "Wiped.Test.Sunday14_3": "",
+
+  //gift taste dialogue
+  "Wiped.Test.Gifts.Loved": "",
+  "Wiped.Test.Gifts.Liked": "",
+  "Wiped.Test.Gifts.Disliked": "",
+  "Wiped.Test.Gifts.Hated": "",
+  "Wiped.Test.Gifts.Neutral": "",
+
+  //begin marriage dialogue
+  "Wiped.Test.SpringM_0": "",
+  "Wiped.Test.SpringM_1": "",
+  "Wiped.Test.SpringM_2": "",
+  "Wiped.Test.SpringM_3": "",
+  "Wiped.Test.SummerM_0": "",
+  "Wiped.Test.SummerM_1": "",
+  "Wiped.Test.SummerM_2": "",
+  "Wiped.Test.SummerM_3": "",
+  "Wiped.Test.FallM_0": "",
+  "Wiped.Test.FallM_1": "",
+  "Wiped.Test.FallM_2": "",
+  "Wiped.Test.FallM_3": "",
+  "Wiped.Test.WinterM_0": "",
+  "Wiped.Test.WinterM_1": "",
+  "Wiped.Test.WinterM_2": "",
+  "Wiped.Test.WinterM_3": "",
+  "Wiped.Test.Rainy_0": "",
+  "Wiped.Test.Rainy_1": "",
+  "Wiped.Test.Rainy_2": "",
+  "Wiped.Test.Rainy_3": "",
+  "Wiped.Test.Rainy_Night_0": "",
+  "Wiped.Test.Rainy_Night_1": "",
+  "Wiped.Test.Rainy_Night_2": "",
+  "Wiped.Test.Rainy_Night_3": "",
+  "Wiped.Test.Indoor_Day_0": "",
+  "Wiped.Test.Indoor_Day_1": "",
+  "Wiped.Test.Indoor_Day_2": "",
+  "Wiped.Test.Indoor_Day_3": "",
+  "Wiped.Test.Indoor_Night_0": "",
+  "Wiped.Test.Indoor_Night_1": "",
+  "Wiped.Test.Indoor_Night_2": "",
+  "Wiped.Test.Indoor_Night_3": "",
+  "Wiped.Test.funLeave_0": "",
+  "Wiped.Test.funLeave_1": "",
+  "Wiped.Test.funLeave_2": "",
+  "Wiped.Test.funLeave_3": "",
+  "Wiped.Test.funReturn_0": "",
+  "Wiped.Test.funReturn_1": "",
+  "Wiped.Test.funReturn_2": "",
+  "Wiped.Test.funReturn_3": "",
+  "Wiped.Test.Outdoor_0": "",
+  "Wiped.Test.Outdoor_1": "",
+  "Wiped.Test.Outdoor_2": "",
+  "Wiped.Test.Outdoor_3": "",
+  "Wiped.Test.oneKid_0": "",
+  "Wiped.Test.oneKid_1": "",
+  "Wiped.Test.oneKid_2": "",
+  "Wiped.Test.oneKid_3": "",
+  "Wiped.Test.twoKids_0": "",
+  "Wiped.Test.twoKids_1": "",
+  "Wiped.Test.twoKids_2": "",
+  "Wiped.Test.twoKids_3": "",
+  "Wiped.Test.Good_0": "",
+  "Wiped.Test.Good_1": "",
+  "Wiped.Test.Good_2": "",
+  "Wiped.Test.Good_3": "",
+  "Wiped.Test.Neutral_0": "",
+  "Wiped.Test.Neutral_1": "",
+  "Wiped.Test.Neutral_2": "",
+  "Wiped.Test.Neutral_3": "",
+  "Wiped.Test.Bad_0": "",
+  "Wiped.Test.Bad_1": "",
+  "Wiped.Test.Bad_2": "",
+  "Wiped.Test.Bad_3": ""
 }
