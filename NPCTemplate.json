@@ -1,4 +1,3 @@
-//this npc template is to be used with credit
 {
   "Changes": [
     {
@@ -50,7 +49,7 @@
           "Condition": "ITEM_ID Target {{ModId}}_{{NPCNAME}}, {{BETASTOGGLED}}, {{BETASBONUSTOGGLED}}, ITEM_STACK Target 1",
           "MarkActionApplied": false,
           "Actions": [
-            "Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} \"{{i18n:BETAS.{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range:4,{{ENDRANGE}}}}}}}}\""
+            "Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} \"{{i18n:BETAS.{{NPCNAME}}.{{WeekDay}}_{{Random:{{Range:4,{{ENDRANGE}}}}}}}}\""
           ]
         }
       }
@@ -66,7 +65,7 @@
           "Condition": "ITEM_ID Target {{ModId}}_{{NPCNAME}}, {{BETASTOGGLED}}, ITEM_STACK Target 1",
           "MarkActionApplied": false,
           "Actions": [
-            "Spiderbuttons.BETAS_RandomAction \"Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} [LocalizedText Mods/{{ModId}}/Translations:BETAS.{{NPCNAME}}.{{DayOfWeek}}_0]\" \"Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} [LocalizedText Mods/{{ModId}}/Translations:BETAS.{{NPCNAME}}.{{DayOfWeek}}_1]\" \"Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} [LocalizedText Mods/{{ModId}}/Translations:BETAS.{{NPCNAME}}.{{DayOfWeek}}_2]\" \"Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} [LocalizedText Mods/{{ModId}}/Translations:BETAS.{{NPCNAME}}.{{DayOfWeek}}_3]\""
+            "Spiderbuttons.BETAS_RandomAction \"Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} [LocalizedText Mods/{{ModId}}/Translations:BETAS.{{NPCNAME}}.{{WeekDay}}_0]\" \"Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} [LocalizedText Mods/{{ModId}}/Translations:BETAS.{{NPCNAME}}.{{WeekDay}}_1]\" \"Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} [LocalizedText Mods/{{ModId}}/Translations:BETAS.{{NPCNAME}}.{{WeekDay}}_2]\" \"Spiderbuttons.BETAS_SetNewDialogue {{ModId}}_{{NPCNAME}} [LocalizedText Mods/{{ModId}}/Translations:BETAS.{{NPCNAME}}.{{WeekDay}}_3]\""
           ]
         }
       }
@@ -259,76 +258,14 @@
         "GreenRain": "{{i18n:{{NPCNAME}}.GreenRain}}",
         "GreenRainFinished": "{{i18n:{{NPCNAME}}.GreenRainFinished}}",
 
-        "Mon": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, 3}}}}}}",
-        "Tue": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, 3}}}}}}",
-        "Wed": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, 3}}}}}}",
-        "Thu": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, 3}}}}}}",
-        "Fri": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, 3}}}}}}",
-        "Sat": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, 3}}}}}}",
-        "Sun": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, 3}}}}}}",
-
-        //2 heart
-        "Mon2": "$query {{2HEART}} # {{i18n:{{NPCNAME}}.Mon2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Tue2": "$query {{2HEART}} # {{i18n:{{NPCNAME}}.Tue2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Wed2": "$query {{2HEART}} # {{i18n:{{NPCNAME}}.Wed2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Thu2": "$query {{2HEART}} # {{i18n:{{NPCNAME}}.Thu2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Fri2": "$query {{2HEART}} # {{i18n:{{NPCNAME}}.Fri2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sat2": "$query {{2HEART}} # {{i18n:{{NPCNAME}}.Sat2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sun2": "$query {{2HEART}} # {{i18n:{{NPCNAME}}.Sun2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-
-        //4 heart
-        "Mon4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.Mon4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Tue4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.Tue4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Wed4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.Wed4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Thu4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.Thu4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Fri4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.Fri4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sat4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.Sat4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sun4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.Sun4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-
-        //6 heart
-        "Mon6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.Mon6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Tue6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.Tue6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Wed6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.Wed6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Thu6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.Thu6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Fri6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.Fri6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sat6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.Sat6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sun6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.Sun6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-
-        //8 heart
-        "Mon8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.Mon8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Tue8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.Tue8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Wed8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.Wed8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Thu8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.Thu8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Fri8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.Fri8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sat8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.Sat8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sun8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.Sun8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-
-        //10 heart
-        "Mon10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.Mon10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Tue10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.Tue10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Wed10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.Wed10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Thu10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.Thu10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Fri10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.Fri10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sat10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.Sat10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sun10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.Sun10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-
-        //12 heart
-        "Mon12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.Mon12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Tue12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.Tue12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Wed12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.Wed12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Thu12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.Thu12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Fri12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.Fri12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sat12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.Sat12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sun12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.Sun12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-
-        //14 heart
-        "Mon14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.Mon14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Mon_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Tue14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.Tue14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Tue_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Wed14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.Wed14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Wed_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Thu14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.Thu14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Thu_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Fri14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.Fri14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Fri_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sat14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.Sat14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sat_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "Sun14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.Sun14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Sun_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}"
+        "{{WeekDay}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, 3}}}}}}",
+        "{{WeekDay}}2": "$query {{2HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.{{PlatonicCheck}}.{{DayOfWeek}}8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.{{PlatonicCheck}}.{{DayOfWeek}}10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}"
       }
     },
     //////////////////////////////////////////////////////////////////////////////////////////////////
