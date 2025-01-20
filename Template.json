@@ -506,6 +506,13 @@
   //door unlock
   "Test.NotFriend_Door": "",
 
+  //gift taste dialogue
+  "Test.Gifts.Loved": "",
+  "Test.Gifts.Liked": "",
+  "Test.Gifts.Disliked": "",
+  "Test.Gifts.Hated": "",
+  "Test.Gifts.Neutral": "",
+
   //begin marriage dialogue
   "Test.SpringM_0": "",
   "Test.SpringM_1": "",
