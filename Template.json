@@ -76,8 +76,6 @@
         "6HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
         "8HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
         "10HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
-        "12HEART": true, //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
-        "14HEART": true //true/false this is togglable, and you do not have to write the dialogue below if any of these are false
 
         "IGNOREMARRIAGESCHEDULE": true, //true/false whether the npc follows their regular schedule or has a marriage schedule
         "SEPARATEDATABILITY": true //true/false whether you have gender conditions for this npc for datability (i.e. lesbian, gay, etc)
@@ -153,16 +151,6 @@
   "Test.Romantic.Monday10_1": "",
   "Test.Romantic.Monday10_2": "",
   "Test.Romantic.Monday10_3": "",
-  //12
-  "Test.Monday12_0": "",
-  "Test.Monday12_1": "",
-  "Test.Monday12_2": "",
-  "Test.Monday12_3": "",
-  //14
-  "Test.Monday14_0": "",
-  "Test.Monday14_1": "",
-  "Test.Monday14_2": "",
-  "Test.Monday14_3": "",
   
   //tuesday
   //BETAS
@@ -210,16 +198,6 @@
   "Test.Romantic.Tuesday10_1": "",
   "Test.Romantic.Tuesday10_2": "",
   "Test.Romantic.Tuesday10_3": "",
-  //12
-  "Test.Tuesday12_0": "",
-  "Test.Tuesday12_1": "",
-  "Test.Tuesday12_2": "",
-  "Test.Tuesday12_3": "",
-  //14
-  "Test.Tuesday14_0": "",
-  "Test.Tuesday14_1": "",
-  "Test.Tuesday14_2": "",
-  "Test.Tuesday14_3": "",
   
   //wednesday
   //BETAS
@@ -267,16 +245,6 @@
   "Test.Romantic.Wednesday10_1": "",
   "Test.Romantic.Wednesday10_2": "",
   "Test.Romantic.Wednesday10_3": "",
-  //12
-  "Test.Wednesday12_0": "",
-  "Test.Wednesday12_1": "",
-  "Test.Wednesday12_2": "",
-  "Test.Wednesday12_3": "",
-  //14
-  "Test.Wednesday14_0": "",
-  "Test.Wednesday14_1": "",
-  "Test.Wednesday14_2": "",
-  "Test.Wednesday14_3": "",
   
   //thursday
   //BETAS
@@ -324,16 +292,6 @@
   "Test.Romantic.Thursday10_1": "",
   "Test.Romantic.Thursday10_2": "",
   "Test.Romantic.Thursday10_3": "",
-  //12
-  "Test.Thursday12_0": "",
-  "Test.Thursday12_1": "",
-  "Test.Thursday12_2": "",
-  "Test.Thursday12_3": "",
-  //14
-  "Test.Thursday14_0": "",
-  "Test.Thursday14_1": "",
-  "Test.Thursday14_2": "",
-  "Test.Thursday14_3": "",
   
   //friday
   //BETAS
@@ -381,16 +339,6 @@
   "Test.Romantic.Friday10_1": "",
   "Test.Romantic.Friday10_2": "",
   "Test.Romantic.Friday10_3": "",
-  //12
-  "Test.Friday12_0": "",
-  "Test.Friday12_1": "",
-  "Test.Friday12_2": "",
-  "Test.Friday12_3": "",
-  //14
-  "Test.Friday14_0": "",
-  "Test.Friday14_1": "",
-  "Test.Friday14_2": "",
-  "Test.Friday14_3": "",
   
   //saturday
   //BETAS
@@ -438,16 +386,6 @@
   "Test.Romantic.Saturday10_1": "",
   "Test.Romantic.Saturday10_2": "",
   "Test.Romantic.Saturday10_3": "",
-  //12
-  "Test.Saturday12_0": "",
-  "Test.Saturday12_1": "",
-  "Test.Saturday12_2": "",
-  "Test.Saturday12_3": "",
-  //14
-  "Test.Saturday14_0": "",
-  "Test.Saturday14_1": "",
-  "Test.Saturday14_2": "",
-  "Test.Saturday14_3": "",
   
   //sunday
   //BETAS
@@ -495,16 +433,6 @@
   "Test.Romantic.Sunday10_1": "",
   "Test.Romantic.Sunday10_2": "",
   "Test.Romantic.Sunday10_3": "",
-  //12
-  "Test.Sunday12_0": "",
-  "Test.Sunday12_1": "",
-  "Test.Sunday12_2": "",
-  "Test.Sunday12_3": "",
-  //14
-  "Test.Sunday14_0": "",
-  "Test.Sunday14_1": "",
-  "Test.Sunday14_2": "",
-  "Test.Sunday14_3": "",
   
   //door unlock
   "Test.NotFriend_Door": "",
