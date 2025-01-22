@@ -39,6 +39,22 @@
       }
     },
     {
+      "LogName": "Wiped Checker",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_{{NPCNAME}}_WipedCheck": {
+          "Id": "{{ModId}}_{{NPCNAME}}_WipedCheck",
+          "Trigger": "Spiderbuttons.BETAS_RelationshipChanged",
+          "Condition": "ITEM_ID Target {{ModId}}_{{NPCNAME}}, Spiderbuttons.BETAS_ITEM_MOD_DATA Input BETAS/RelationshipChanged/WasMemoryWiped true, {{BETASWIPED}}",
+          "MarkActionApplied": false,
+          "Actions": [
+            "AddMail Current {{ModId}}_{{NPCNAME}}_Wiped received"
+          ]
+        }
+      }
+    },
+    {
       "LogName": "Trigger Actions: BETAS",
       "Action": "EditData",
       "Target": "Data/TriggerActions",
@@ -187,13 +203,37 @@
         "{{ModId}}_{{NPCNAME}}": "{{i18n:{{NPCNAME}}.Gifts.Loved}}/{{LOVEDGIFTS}}/{{i18n:{{NPCNAME}}.Gifts.Liked}}/{{LIKEDGIFTS}}/{{i18n:{{NPCNAME}}.Gifts.Disliked}}/{{DISLIKEDGIFTS}}/{{i18n:{{NPCNAME}}.Gifts.Hated}}/{{HATEDGIFTS}}/{{i18n:{{NPCNAME}}.Gifts.Neutral}}/{{NEUTRALGIFTS}}/"
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "When": {
+        "HasFlag": "{{ModId}}_{{NPCNAME}}_Wiped"
+      },
+      "Entries": {
+        "{{ModId}}_{{NPCNAME}}": "{{i18n:Wiped.{{NPCNAME}}.Gifts.Loved}}/{{LOVEDGIFTS}}/{{i18n:Wiped.{{NPCNAME}}.Gifts.Liked}}/{{LIKEDGIFTS}}/{{i18n:Wiped.{{NPCNAME}}.Gifts.Disliked}}/{{DISLIKEDGIFTS}}/{{i18n:Wiped.{{NPCNAME}}.Gifts.Hated}}/{{HATEDGIFTS}}/{{i18n:Wiped.{{NPCNAME}}.Gifts.Neutral}}/{{NEUTRALGIFTS}}/"
+      }
+    },
     //////////////////////////////////////////////////////////////////////////////////////////////////
     {
+      "LogName": "Engaged and Aftewedding dialogue",
       "Action": "EditData",
       "Target": "Strings/StringsFromCSFiles",
       "Entries": {
         "{{ModId}}_{{NPCNAME}}_Engaged": "{{i18n:{{NPCNAME}}.Engaged}}", //proposal
         "{{ModId}}_{{NPCNAME}}_AfterWedding": "{{i18n:{{NPCNAME}}.AfterWedding}}"
+      }
+    },
+    {
+      "LogName": "Engaged and Aftewedding dialogue",
+      "Action": "EditData",
+      "When": {
+        "HasFlag": "{{ModId}}_{{NPCNAME}}_Wiped"
+      },
+      "Target": "Strings/StringsFromCSFiles",
+      "Entries": {
+        "{{ModId}}_{{NPCNAME}}_Engaged": "{{i18n:Wiped.{{NPCNAME}}}}",
+        //proposal
+        "{{ModId}}_{{NPCNAME}}_AfterWedding": "{{i18n:Wiped.{{NPCNAME}}.AfterWedding}}"
       }
     },
     //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -237,6 +277,7 @@
     },
     //////////////////////////////////////////////////////////////////////////////////////////////////
     {
+      "LogName": "Base Dialogue",
       "Action": "EditData",
       "Target": "Characters/Dialogue/{{ModId}}_{{NPCNAME}}",
       "Entries": {
@@ -263,9 +304,42 @@
         "{{WeekDay}}4": "$query {{4HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
         "{{WeekDay}}6": "$query {{6HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
         "{{WeekDay}}8": "$query {{8HEART}} # {{i18n:{{NPCNAME}}.{{PlatonicCheck}}.{{DayOfWeek}}8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "{{WeekDay}}10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.{{PlatonicCheck}}.{{DayOfWeek}}10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "{{WeekDay}}12": "$query {{12HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}12_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
-        "{{WeekDay}}14": "$query {{14HEART}} # {{i18n:{{NPCNAME}}.{{DayOfWeek}}14_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}"
+        "{{WeekDay}}10": "$query {{10HEART}} # {{i18n:{{NPCNAME}}.{{PlatonicCheck}}.{{DayOfWeek}}10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}"
+      }
+    },
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    {
+      "LogName": "Wiped Memory",
+      "When": {
+        "HasFlag": "{{ModId}}_{{NPCNAME}}_Wiped"
+      },
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/{{ModId}}_{{NPCNAME}}",
+      "Entries": {
+        "breakUp": "{{i18n:Wiped.{{NPCNAME}}.breakUp}}",
+        "divorced": "{{i18n:Wiped.{{NPCNAME}}.divorced}}",
+        "DumpsterDiveComment": "{{i18n:Wiped.{{NPCNAME}}.DumpsterDiveComment}}",
+        "HitBySlingshot": "{{i18n:Wiped.{{NPCNAME}}.HitBySlingshot}}",
+        "SpouseFarmhouseClutter": "{{i18n:Wiped.{{NPCNAME}}.SpouseFarmhouseClutter}}",
+        "SpouseGiftJealous": "{{i18n:Wiped.{{NPCNAME}}.SpouseGiftJealous}}",
+        "Spouse_MonstersInHouse": "{{i18n:Wiped.{{NPCNAME}}.Spouse_MonstersInHouse}}",
+        "SpouseStardrop": "{{i18n:Wiped.{{NPCNAME}}.SpouseStardrop}}",
+        "WipedMemory": "{{i18n:Wiped.{{NPCNAME}}.WipedMemory}}",
+        "AcceptBouquet": "{{i18n:Wiped.{{NPCNAME}}.AcceptBouquet}}",
+        "MovieInvitation": "{{i18n:Wiped.{{NPCNAME}}.MovieInvitation}}",
+        "RejectBouquet": "{{i18n:Wiped.{{NPCNAME}}.RejectBouquet}}",
+        "RejectGift_Divorced": "{{i18n:Wiped.{{NPCNAME}}.RejectGift_Divorced}}",
+        "RejectMermaidPendant": "{{i18n:Wiped.{{NPCNAME}}.RejectMermaidPendant}}",
+        "RejectMovieTicket": "{{i18n:Wiped.{{NPCNAME}}.RejectMovieTicket}}",
+        "GreenRain": "{{i18n:Wiped.{{NPCNAME}}.GreenRain}}",
+        "GreenRainFinished": "{{i18n:Wiped.{{NPCNAME}}.GreenRainFinished}}",
+
+        "{{WeekDay}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, 3}}}}}}",
+        "{{WeekDay}}2": "$query {{2HEART}} # {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}2_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}4": "$query {{4HEART}} # {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}4_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}6": "$query {{6HEART}} # {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}6_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}8": "$query {{8HEART}} # {{i18n:Wiped.{{NPCNAME}}.{{PlatonicCheck}}.{{DayOfWeek}}8_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}",
+        "{{WeekDay}}10": "$query {{10HEART}} # {{i18n:Wiped.{{NPCNAME}}.{{PlatonicCheck}}.{{DayOfWeek}}10_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.{{DayOfWeek}}_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}}"
       }
     },
     //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -276,6 +350,18 @@
       "Entries": {
         "{{ModId}}_{{NPCNAME}}0": "{{i18n:{{NPCNAME}}.Engaged1}}",
         "{{ModId}}_{{NPCNAME}}1": "{{i18n:{{NPCNAME}}.Engaged2}}"
+      }
+    },
+    {
+      "LogName": "Wiped Engaged Dialogue",
+      "Action": "EditData",
+      "When": {
+        "HasFlag": "{{ModId}}_{{NPCNAME}}_Wiped"
+      },
+      "Target": "data/EngagementDialogue",
+      "Entries": {
+        "{{ModId}}_{{NPCNAME}}0": "{{i18n:Wiped.{{NPCNAME}}.Engaged1}}",
+        "{{ModId}}_{{NPCNAME}}1": "{{i18n:Wiped.{{NPCNAME}}.Engaged2}}"
       }
     },
     //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -372,6 +458,94 @@
         "Bad_7": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
         "Bad_8": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
         "Bad_9": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}"
+      }
+    },
+    {
+      "LogName": "Marriage Dialogue - Wiped",
+      "Action": "EditData",
+      "When": {
+        "HasFlag": "{{ModId}}_{{NPCNAME}}_Wiped"
+      },
+      "Target": "Characters/Dialogue/MarriageDialogue{{ModId}}_{{NPCNAME}}",
+      "Entries": {
+        "Spring_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.SpringM_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.SpringM_{{Random:{{Range: 0, 3}}}}}}",
+        "Summer_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.SummerM_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.SummerM_{{Random:{{Range: 0, 3}}}}}}",
+        "Fall_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.FallM_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.FallM_{{Random:{{Range: 0, 3}}}}}}",
+        "Winter_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.WinterM_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.WinterM_{{Random:{{Range: 0, 3}}}}}}",
+        "patio_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Patio_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Patio_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Day_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Day_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Day_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Day_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Day_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Day_5": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Day_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Day_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Day_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Day_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Day_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Day_5": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Day_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Night_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Night_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Night_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Night_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Night_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Rainy_Night_5": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Rainy_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Night_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Night_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Night_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Night_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Night_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "Indoor_Night_5": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Indoor_Night_{{Random:{{Range: 0, 3}}}}}}",
+        "funLeave_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.funLeave_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.funLeave_{{Random:{{Range: 0, 3}}}}}}",
+        "funReturn_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.funReturn_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.funReturn_{{Random:{{Range: 0, 3}}}}}}",
+        "Outdoor_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, 3}}}}}}",
+        "Outdoor_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, 3}}}}}}",
+        "Outdoor_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, 3}}}}}}",
+        "Outdoor_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, 3}}}}}}",
+        "Outdoor_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, 3}}}}}}",
+        "Outdoor_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Outdoor_{{Random:{{Range: 0, 3}}}}}}",
+        "spouseRoom_{{ModId}}_{{NPCNAME}}": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.spouseRoom_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.spouseRoom_{{Random:{{Range: 0, 3}}}}}}",
+        "OneKid_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, 3}}}}}}",
+        "OneKid_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, 3}}}}}}",
+        "OneKid_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, 3}}}}}}",
+        "OneKid_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, 3}}}}}}",
+        "OneKid_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.oneKid_{{Random:{{Range: 0, 3}}}}}}",
+        "TwoKids_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, 3}}}}}}",
+        "TwoKids_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, 3}}}}}}",
+        "TwoKids_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, 3}}}}}}",
+        "TwoKids_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, 3}}}}}}",
+        "TwoKids_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.twoKids_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_5": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_6": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_7": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_8": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Good_9": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Good_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_5": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_6": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_7": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_8": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Neutral_9": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Neutral_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_0": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_1": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_2": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_3": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_4": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_5": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_6": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_7": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_8": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}",
+        "Bad_9": "$query {{Query: {{ENDRANGE}} > 3}} # {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, {{ENDRANGE}}}}}}}} | {{i18n:Wiped.{{NPCNAME}}.Bad_{{Random:{{Range: 0, 3}}}}}}"
       }
     }
   ]
