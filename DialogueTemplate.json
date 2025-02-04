@@ -5,6 +5,10 @@ if ANYTHING starts with BETAS then it needs a toggle to turn on
 Heart Threshold Dialogues i.e.: "Monday2_0" etc etc, need to be toggled on
 If you're NOT rejecting Stardrop Tea/Mermaid Pendant, you can ignore those two dialogue lines
 If you're NOT using custom labels on the Social / Profile page you can ignore the (housemate) stuff
+
+Copy and paste the below into a .json file
+Replace the "TEST" with your NPC's INTERNAL NAME
+Bingo bango done, have fun suffering!
 */
 {
  "Test": "Test",
