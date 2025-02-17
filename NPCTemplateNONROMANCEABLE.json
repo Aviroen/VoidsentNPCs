@@ -1,0 +1,54 @@
+{
+ "LogName": "NPC NAME",
+ "Action": "Include",
+ "FromFile": "Data/Templates/A_Template_NPCs.json",
+ "LocalTokens": {
+  "NPCNAME": "Edelweiss", //internal name
+  "DISPLAYNAME": "Edelweiss", //display name
+  "GENDER": "Undefined", //male/female/undefined
+  "MANNER": "Rude", //polite, neutral, rude changes stringsfromcsfiles
+  "ANXIETY": "Shy", //outgoing, neutral, shy changes stringsfromcsfiles
+  "OPTIMISM": "Negative", //positive, neutral, negative changes stringsfromcsfiles
+  "DARKSKIN": "false", //true/false
+  "GIFTABLE": "false", //true/false
+  "UNLOCKCONDITIONS": "PLAYER_HAS_MAIL Current {{ModId}}_EdelweissWarp any", //GSQ FOR UNLOCK
+  "HOMEFACING": "right", //left, right, up, down
+  "LOVEDGIFTS": "96 97 98 99 104 109 114 121 122 116 125 MysticSyrup MysticTreeSeed",
+  "LIKEDGIFTS": "198 202 212 213 214 218 219 225 226 227 228 242 265 727 728 730 732 873 904 905 906 907 921 category_flowers",
+  "DISLIKEDGIFTS": "78 259 256 685 769",
+  "HATEDGIFTS": "889 909 910 Moss 203 209 306 307 308 category_junk",
+  "NEUTRALGIFTS": "334 335 336 337 338 378 380 382 384 386 388 390 394 category_trinket",
+  "SLEEPANIMATION": "28/28/28", //if you'd like to have a moving sleeping animation read: "18/19 19 19 19 19 18 18 18 18 19 19 19 19 18 18 18 18 19 19 19 19/19" example
+  "SPECIAL1": "sleforward", //special animation 1 name
+  "SPECIAL1ANIMATION": "16/16 16 17 17 17 18 18 18 17 17 18 18 19 19 18 18 17 17 18 18 19 19 18 18 17 17 16 16/16",
+  "SPECIAL2": "hammer", //special animation 2 name
+  "SPECIAL2ANIMATION": "20/20 20 20 20 20 21 22 23 20 20 20 20 20 20/20",
+  "ENDRANGE": "4", //ENDRANGE ADDS MORE DIALOGUE TO **EACH AND EVERY DIALOGUE KEY**
+  "SPRINGSCHEDULE": "610 <LOCATION> <XPOS> <YPOS> <FACING>",
+  "SUMMERSCHEDULE": "GOTO spring",
+  "FALLSCHEDULE": "GOTO spring",
+  "WINTERSCHEDULE": "GOTO spring",
+  //hammering
+  "MONDAYSCHEDULE": "GOTO spring",
+  //alchemy
+  "TUESDAYSCHEDULE": "GOTO spring",
+  //reading
+  "WEDNESDAYSCHEDULE": "GOTO spring",
+  //grave
+  "THURSAYSCHEDULE": "GOTO spring",
+  //hammer
+  "FRIDAYSCHEDULE": "GOTO spring",
+  "SATURDAYSCHEDULE": "GOTO spring",
+  "SUNDAYSCHEDULE": "GOTO spring"
+
+  //HEART DIALOGUES
+  "2HEART": false, //true/false
+  "4HEART": false, //true/false
+  "6HEART": false, //true/false
+  "8HEART": false, //true/false
+  "10HEART": false, //true/false
+
+  "BETASTOGGLED": false, //true/false
+  "REJECTTEA": false
+ }
+},
